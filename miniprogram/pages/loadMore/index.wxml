@@ -1,0 +1,24 @@
+<view class="container">
+    <!-- 下拉刷新区域 -->
+    <scroll-view class="scroll" scroll-y refresher-enabled refresher-triggered="{{isRefreshing}}" bindrefresherrefresh="onRefresh" bindscrolltolower="onReachBottom">
+        <!-- 下拉刷新提示 -->
+        <view wx:if="{{isRefreshing}}" class="refresh-loading">
+            <image src="/assets/images/loading.gif" mode="aspectFit" class="loading-icon"></image>
+            <text>正在刷新...</text>
+        </view>
+
+        <!-- 列表内容 -->
+        <view class="list-container">
+            <block wx:for="{{listData}}" wx:key="id">
+                <view class="list-item">{{item.title}}</view>
+            </block>
+
+            <!-- 加载更多提示 -->
+            <view wx:if="{{isLoadingMore}}" class="load-more">
+                <image src="/assets/images/loading.gif" mode="aspectFit" class="loading-icon"></image>
+                <text>正在加载...</text>
+            </view>
+            <view wx:if="{{noMoreData}}" class="no-more">没有更多数据了</view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/loadMore/index",
     "pages/index/index",
     "pages/kitchen/index",
     "pages/detail/index",
@@ -10,25 +11,31 @@
     "pages/learn/index",
     "pages/learn/detail",
     "pages/search/index"
+    
   ],
   "tabBar": {
     "custom": true,
     "color": "#000",
     "selectedColor": "#000",
     "backgroundColor": "#fff",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/learn/index",
-      "text": "技巧"
-    }, {
-      "pagePath": "pages/kitchen/index",
-      "text": "表情"
-    }, {
-      "pagePath": "pages/my/index",
-      "text": "我的"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/learn/index",
+        "text": "技巧"
+      },
+      {
+        "pagePath": "pages/kitchen/index",
+        "text": "表情"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的"
+      }
+    ]
   },
   "window": {
     "backgroundColor": "#f6f6f6",
